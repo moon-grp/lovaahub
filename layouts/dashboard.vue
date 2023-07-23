@@ -122,8 +122,8 @@ export default {
   },
   methods: {
     logout() {
-      this.$cookies.removeAll()
-      this.$router.push({ name: 'vendor' })
+
+      this.$router.push({ name: 'index' })
     },
   },
   filters: {
