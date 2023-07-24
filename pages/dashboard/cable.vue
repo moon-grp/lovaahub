@@ -93,7 +93,7 @@
             block
             class="text-capitalize"
           >
-            buy data
+            buy cable
           </v-btn>
         </div>
       </v-col>

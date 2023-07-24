@@ -66,7 +66,74 @@
       </v-card>
     </v-row>
 
+
+
     <!-- mobile version -->
+    <v-row class="hidden-md-and-up mt-2">
+      <v-card class="mx-4 " width="544" outlined>
+        <v-col>
+          <v-row justify="center" align="center" class="">
+            <v-col cols="12" sm="8" md="6">
+              <p class="text-capitalize text-center titl-fnt">
+                Login to Admin Dashboard
+              </p>
+            </v-col>
+          </v-row>
+          <!--       <v-row class="mt-4">
+            <v-col>
+              <div>
+                <v-text-field
+                  label="Enter your Email"
+                  style="corner"
+                  outlined
+                  color="#45D0FB"
+                  class="{width:40px}"
+                  v-model="email"
+                  :error-messages="emailErrors"
+                  @input="$v.email.$touch()"
+                  @blur="$v.email.$touch()"
+                ></v-text-field>
+              </div>
+            </v-col>
+          </v-row> -->
+
+          <v-row>
+            <v-col>
+              <v-text-field
+                label="Enter your Password"
+                outlined
+                color="#45D0FB"
+                v-model="password"
+                :error-messages="passwordErros"
+                @input="$v.password.$touch()"
+                @blur="$v.password.$touch()"
+                @click:append="show = !show"
+                :type="show ? 'text' : 'password'"
+                :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
+              ></v-text-field>
+            </v-col>
+          </v-row>
+
+          <v-row>
+            <v-col>
+              <div>
+                <v-btn
+                  color="#252362"
+                  x-large
+                  :loading="loading"
+                  dark
+                  @click="login"
+                  block
+                  class="text-capitalize"
+                >
+                  log in
+                </v-btn>
+              </div>
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-card>
+    </v-row>
     <v-snackbar v-model="snackbar" :timeout="timeout" color="success" top>
       {{ msg }}
     </v-snackbar>
